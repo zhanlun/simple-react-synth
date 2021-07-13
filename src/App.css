@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: #fff;
   height: 100vh;
+  color: #fff;
 }
 
 .App-logo {
@@ -67,7 +67,6 @@ input[type="range"] {
 }
 
 .settingDiv {
-  float: left;
   border: 1px solid black;
   background: #222;
   border-radius: 5px;
@@ -76,6 +75,15 @@ input[type="range"] {
   margin-left: 10px;
   color: #fff;
 }
+
+.settingLeft {
+  float: left;
+}
+
+.settingRight {
+  float: right;
+}
+
 .settingList {
   display: flex;
   margin: 0;
@@ -84,4 +92,8 @@ input[type="range"] {
 }
 .selected {
   background-color: #ffff00;
+}
+
+.App h1, h3 {
+  margin: 15px;
 }

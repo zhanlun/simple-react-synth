@@ -82,7 +82,7 @@ export default class PianoBoard extends Component {
     render() {
         return (
             <div style={pianoBoardStyles} className="pianoBoard">
-                <div className="settingDiv" >
+                <div className="settingDiv settingLeft" >
                     <ul className="settingList">
                         <li className="btnDescription">RANGE</li>
 
@@ -90,7 +90,7 @@ export default class PianoBoard extends Component {
                         <li onClick={() => this.handleOctave(4, 7)} className={"keyboardBtn " + (this.state.selectedOctave === 3 ? 'selected' : '')}>3</li>
                     </ul>
                 </div>
-                <div className="settingDiv">
+                <div className="settingDiv settingRight">
                     <ul className="settingList">
                         <li className="btnDescription">VOLUME</li>
                         <li>
@@ -98,7 +98,7 @@ export default class PianoBoard extends Component {
                         </li>
                     </ul>
                 </div>
-                <div className="settingDiv">
+                {/* <div className="settingDiv">
                     <ul className="settingList">
                         <li className="btnDescription">TONE</li>
 
@@ -106,7 +106,7 @@ export default class PianoBoard extends Component {
                         <li onClick={() => this.handleTone('sine5')} className={"keyboardBtn " + (this.state.oscillator === 'sine5' ? 'selected' : '')}  >B</li>
                         <li onClick={() => this.handleTone('sawtooth')} className={"keyboardBtn " + (this.state.oscillator === 'sawtooth' ? 'selected' : '')} >C</li>
                     </ul>
-                </div>
+                </div> */}
                 <br />
                 <div style={{ margin: 0, marginTop: '60px', height: '100%' }}>
                     <div style={{ margin: 'auto', width: 'fit-content', height: '100%' }}>

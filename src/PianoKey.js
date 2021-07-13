@@ -27,32 +27,29 @@ export default class PianoKey extends Component {
             }
         })
         this.synth.toDestination();
-        
     }
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        let prevTone = prevProps.oscillator
-        let nextTone = this.props.oscillator
 
-        if (prevTone !== nextTone) {
-            console.log(prevTone, nextTone)
-            this.synth.triggerRelease()
-
-            this.synth = null
-            this.synth = new Tone.Synth( {
-                oscillator: {
-                    "type": nextTone,
-                }
-            })
-            this.synth.toDestination();
-        }
+    componentWillUnmount() {
+        this.synth.triggerRelease()
+        delete this.synth
+        console.log(this.synth)
     }
 
     handleTouchDown = (event) => {
-        event.preventDefault()
+        try {
+            event.preventDefault()
+        } catch (e) {
+            
+        }
+        Tone.context.resume()
         this.handleDown()
     }
     handleTouchUp = (event) => {
-        event.preventDefault()
+        try {
+            event.preventDefault()
+        } catch (e) {
+    
+        }
         this.handleUp()
     }
     handleDown = () => {
@@ -78,7 +75,7 @@ export default class PianoKey extends Component {
             }))
             this.synth.triggerRelease();
         } catch (e) {
-
+            
         }
     }
 
