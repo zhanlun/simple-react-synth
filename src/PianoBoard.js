@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import PianoKey from './PianoKey'
 
 export default class PianoBoard extends Component {
